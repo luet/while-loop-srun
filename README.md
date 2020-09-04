@@ -19,7 +19,7 @@ Usage
     sbatch while.sh
     ```
 
-2.  This will create files with `.out` extension (e.g. = 01-02-03.out=).
+2.  This will create files with `.out` extension (e.g. `01-02-03.out`).
 
 3.  In the current example which requests 5 cores for 8 parameters, you
     can check that a first batch of 5 jobs are running at the same time,
