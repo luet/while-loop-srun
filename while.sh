@@ -5,7 +5,7 @@
 
 while read a b c
 do
-    srun -n 1 ./code.sh $a $b $c > $a-$b-$c.out &
+    srun -n 1 --output=$a-$b-$c.out --exclusive ./code.sh $a $b $c &
 done < parameters.dat
 
 wait
