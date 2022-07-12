@@ -1,10 +1,15 @@
 #! /bin/bash
-#SBATCH -n 5
+#SBATCH -N 2
+#SBATCH -n 4
 #SBATCH -t 0:5:0
 
-while read a b c
-do
-    srun --exclusive -n 1 ./code.sh $a $b $c > $a-$b-$c.out &
-done < parameters.dat
 
+dirs=(1 2 3 4)
+temps=(a b c d )
+
+for i in "${dirs[@]}";do
+    for j in "${temps[@]}";do
+	srun -n 2 ./code.sh $i $j > $i-$j.out &
+    done
+done
 wait
