@@ -6,6 +6,9 @@
 #include <unistd.h>
 #include <time.h>
 
+// compile with:
+//    mpicc -o hello hello.c
+
 int main(int argc, char **argv){
   int i, j, k,l;
   int rank, size, partner;
