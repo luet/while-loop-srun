@@ -1,7 +1,8 @@
 #! /bin/bash
-echo \#\# $* \#\#
-hostname
-date
+echo $$ \#\# $* \#\#
+echo $$ `hostname`
+echo $$ start: `date`
 sleep 10s
-date
-echo \#\#\#\#\#
+echo $$ end: `date`
+echo $$ \#\#\#\#\#
+
